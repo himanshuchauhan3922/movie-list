@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --background-color: #121212;
+    --card-background-color: #1f1f1f;
+    --text-color: #ffffff;
+    --input-background-color: #333333;
+    --input-border-color: #444444;
+    --input-text-color: #ffffff;
+    --highlight-color: #bb86fc;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: var(--highlight-color);
+  }
+  
+  input[type="text"] {
+    background-color: var(--input-background-color);
+    border: 1px solid var(--input-border-color);
+    color: var(--input-text-color);
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="text"]::placeholder {
+    color: var(--input-text-color);
+  }
+  
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .movie-card {
+    background-color: var(--card-background-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--highlight-color);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    border-bottom: 1px solid var(--input-border-color);
+  }
+  
+  .movie-details {
+    padding: 10px;
+  }
+  
+  .movie-details h2 {
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+  }
+  
+  .movie-details p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 5px;
+  }
+  
